@@ -1,12 +1,12 @@
-var React = require('react');
-var {Link, IndexLink} = require('react-router');
+import React from 'react';
+import { Link, IndexLink } from 'react-router';
 // same as...
 // var Link = require('react-router').Link
-
-var Nav = React.createClass({
+export default class Nav extends React.Component {
   onSearch(e) {
     e.preventDefault();
-  },
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +19,4 @@ var Nav = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = Nav;
+}

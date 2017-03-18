@@ -1,10 +1,7 @@
 // we removed the script tags from the html, so now need to require
-// var React = require('react');
 import React from 'react';
 import ReactDOM from 'react-dom';
-// var ReactDOM = require('react-dom');
-// ES6 de-structuring syntax
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import Main from 'main';
 
 // var Main = require('Main');

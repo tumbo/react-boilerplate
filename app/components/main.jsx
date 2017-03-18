@@ -1,7 +1,8 @@
-var React = require('react');
-var Nav = require('Nav');
+import React from 'react';
+import Nav from 'nav';
 
-var Main = React.createClass({
+export default class Main extends React.Component {
+
   render() {
     return (
       <div className="container">
@@ -17,6 +18,4 @@ var Main = React.createClass({
 
     );
   }
-});
-
-module.exports = Main;
+}
