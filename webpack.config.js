@@ -1,3 +1,6 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
   entry: './app/app.jsx',
   output: {
@@ -5,22 +8,25 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
-    root: __dirname,
-    alias: {
-      Main: 'app/components/main.jsx',
-      Nav: 'app/components/nav.jsx'
-    },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    modules: ['node_modules', './app/components']
   },
   module: {
     loaders: [
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react','es2015']
+          presets: ['react','es2015','stage-2']
         },
         test: /\.jsx?$/ ,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader"
+        ]
       }
     ]
   }
